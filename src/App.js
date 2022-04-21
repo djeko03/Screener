@@ -180,31 +180,31 @@ export const App = () => {
                 setDownloaded(!downloaded)
                 console.log(downloaded)
             },1000)
-        }}>show/update</button>
+        }}>show</button>
         <div style={{display:'flex', justifyContent:'space-between'}}>
-            <div style={{width:'8%', fontWeight:'700'}}>Название</div>
-            <div style={{width:'8%', fontWeight:'700'}}>Цена покупки:</div>
-            <div style={{width:'8%', fontWeight:'700'}}>Количество:</div>
-            <div style={{width:'8%', fontWeight:'700'}}>Объем покупки в $</div>
-            <div style={{width:'8%', fontWeight:'700'}}>До уровня %</div>
-            <div style={{width:'8%', fontWeight:'700'}}>Цена продажи:</div>
-            <div style={{width:'8%', fontWeight:'700'}}>Количество:</div>
-            <div style={{width:'8%', fontWeight:'700'}}>Объем продажи в $</div>
-            <div style={{width:'8%', fontWeight:'700'}}>До уровня %</div>
+            <div style={{width:'11%', fontWeight:'700'}}>Название</div>
+            <div style={{width:'11%', fontWeight:'700'}}>Цена покупки:</div>
+            <div style={{width:'11%', fontWeight:'700'}}>Количество:</div>
+            <div style={{width:'11%', fontWeight:'700'}}>Объем покупки в $</div>
+            <div style={{width:'11%', fontWeight:'700'}}>До уровня %</div>
+            <div style={{width:'11%', fontWeight:'700'}}>Цена продажи:</div>
+            <div style={{width:'11%', fontWeight:'700'}}>Количество:</div>
+            <div style={{width:'11%', fontWeight:'700'}}>Объем продажи в $</div>
+            <div style={{width:'11%', fontWeight:'700'}}>До уровня %</div>
         </div>
         {
             myAllCoins ?
                 myAllCoins.map(coin =>
                 <div style={{marginTop:'3px', display:'flex', justifyContent:'space-between'}} key={coin.asks[1]}>
-                    <div style={{width:'8%'}}>{coin.name}</div>
-                    <div style={{width:'8%', border: '1px solid green', paddingLeft: '15px'}}>{coin.asks[0]}</div>
-                    <div style={{width:'8%', border: '1px solid green', paddingLeft: '15px'}}>{coin.asks[1]}</div>
-                    <div style={{width:'8%', border: '1px solid green', paddingLeft: '15px'}}> {coin.asks[0]*coin.asks[1]}</div>
-                    <div style={{width:'8%', border: '1px solid green', paddingLeft: '15px'}}>{calculateLevel(coin.asks[0], coin.price)} %</div>
-                    <div style={{width:'8%', border: '1px solid red', paddingLeft: '15px'}}>{coin.bids[0]}</div>
-                    <div style={{width:'8%', border: '1px solid red', paddingLeft: '15px'}}>{coin.bids[1]}</div>
-                    <div style={{width:'8%', border: '1px solid red', paddingLeft: '15px'}}> {coin.bids[0]*coin.bids[1]}</div>
-                    <div style={{width:'8%', border: '1px solid red', paddingLeft: '15px'}}>{calculateLevel(coin.bids[0], coin.price)} %</div>
+                    <div style={{width:'11%'}}>{coin.name}</div>
+                    <div style={{width:'11%', border: '1px solid green', paddingLeft: '15px'}}>{coin.asks[0]}</div>
+                    <div style={{width:'11%', border: '1px solid green', paddingLeft: '15px'}}>{coin.asks[1]}</div>
+                    <div style={{width:'11%', border: '1px solid green', paddingLeft: '15px'}}> {coin.asks[0]*coin.asks[1]}</div>
+                    <div style={{width:'11%', border: '1px solid green', paddingLeft: '15px'}}>{calculateLevel(coin.asks[0], coin.price)} %</div>
+                    <div style={{width:'11%', border: '1px solid red', paddingLeft: '15px'}}>{coin.bids[0]}</div>
+                    <div style={{width:'11%', border: '1px solid red', paddingLeft: '15px'}}>{coin.bids[1]}</div>
+                    <div style={{width:'11%', border: '1px solid red', paddingLeft: '15px'}}> {coin.bids[0]*coin.bids[1]}</div>
+                    <div style={{width:'11%', border: '1px solid red', paddingLeft: '15px'}}>{calculateLevel(coin.bids[0], coin.price)} %</div>
                 </div>
             )
             : 'Error'
