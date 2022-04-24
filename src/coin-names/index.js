@@ -133,4 +133,5 @@ export const coinNames = ['BTCUSDT',
     'DUSKUSDT',
     'BTTCUSDT',
     'FLOWUSDT',
+    'JASMYUSDT',
     'IMXUSDT']

@@ -1,0 +1,27 @@
+
+
+.coin {
+    display: flex;
+    margin-top: 3px;
+}
+
+.allBlocks {
+    width: 9%;
+    padding-left: 15px;
+}
+
+.asksBorder {
+    border: 1px solid green;
+}
+
+.bidsBorder {
+    border: 1px solid red;
+}
+
+.asksVolumeBorder {
+    border: 2px solid green;
+}
+
+.bidsVolumeBorder {
+    border: 2px solid red;
+}
