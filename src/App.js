@@ -15,23 +15,23 @@ export const App = () => {
     const [bidsPercent, setBidsPercent] = useState(false)
 
     let myCoins = []
-    function calcAsksVolume (str) {
-        if (str.length === 5) {
-            str = str[0] + str[1] + 'K'
-            return str
-        } if (str.length === 6) {
-            str = str[0] + str[1] + str[2] + 'K'
-            return str
-        } if (str.length === 7) {
-            str = str[0] + '.' + str[1] + 'M'
-            return str
-        } if (str.length === 8) {
-            str = str[0] + str[1] + '.' + str[2] + 'M'
-            return str
-        } else {
-            return str
-        }
-    }
+    // function calcAsksVolume (str) {
+    //     if (str.length === 5) {
+    //         str = str[0] + str[1] + 'K'
+    //         return str
+    //     } if (str.length === 6) {
+    //         str = str[0] + str[1] + str[2] + 'K'
+    //         return str
+    //     } if (str.length === 7) {
+    //         str = str[0] + '.' + str[1] + 'M'
+    //         return str
+    //     } if (str.length === 8) {
+    //         str = str[0] + str[1] + '.' + str[2] + 'M'
+    //         return str
+    //     } else {
+    //         return str
+    //     }
+    // }
 
 
     const computeExpensiveValue = () => {
@@ -48,7 +48,8 @@ export const App = () => {
                                             name: coinName,
                                             asks: res.data.asks[0],
                                             bids: res.data.bids[0],
-                                            asksVolume: calcAsksVolume(String(parseInt(res.data.asks[0][0]*res.data.asks[0][1]))),
+                                            // asksVolume: calcAsksVolume(String(parseInt(res.data.asks[0][0]*res.data.asks[0][1]))),
+                                            asksVolume: parseInt(res.data.asks[0][0]*res.data.asks[0][1]),
                                             bidsVolume: parseInt(res.data.bids[0][0]*res.data.bids[0][1]),
                                             price:resp.data.price,
                                             asksPercent: (100 - (resp.data.price / res.data.asks[0][0] * 100)),
